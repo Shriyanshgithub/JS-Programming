@@ -1,37 +1,35 @@
+const readline = require('readline');
 
-const num = parseInt(process.argv[2]); 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-switch (num) {
-    case 0:
-        console.log("Zero");
-        break;
-    case 1:
-        console.log("One");
-        break;
-    case 2:
-        console.log("Two");
-        break;
-    case 3:
-        console.log("Three");
-        break;
-    case 4:
-        console.log("Four");
-        break;
-    case 5:
-        console.log("Five");
-        break;
-    case 6:
-        console.log("Six");
-        break;
-    case 7:
-        console.log("Seven");
-        break;
-    case 8:
-        console.log("Eight");
-        break;
-    case 9:
-        console.log("Nine");
-        break;
-    default:
-        console.log("Invalid input! Please enter a single-digit number (0-9).");
-}
+rl.question("Enter a number between 1 and 7: ", (num) => {
+    switch (parseInt(num)) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+        default:
+            console.log("Invalid input! Please enter a number between 1 and 7.");
+    }
+    rl.close();  // Close the input stream
+});
