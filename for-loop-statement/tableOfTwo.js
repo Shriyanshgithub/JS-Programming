@@ -2,7 +2,7 @@
 console.log("Enter the number");
 const num = parseInt(process.argv[2]);
 
-if(isNaN(num) || n<1){
+if(isNaN(num) || num<1){
     console.log("Invalid number");
 }
 else{
